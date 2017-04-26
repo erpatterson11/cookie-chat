@@ -6,6 +6,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body ng-controller="mainCtrl">
+    <div class="header-image">
+
+    </div>
     <div class="main-container">
       <h1> DevMountain Chat Room </h1>
       <form name="submitMessage" ng-submit="postMessage(message)">
@@ -14,7 +17,7 @@
       <div class="messages-container">
         <h1 class="messages-title">Messages from DevMountaineers</h1>
         <p ng-repeat="message in messages ">
-          {{message.message}} <span> {{message.createdAt | date:'dd-MM-yyyy h:mm a'}}</span></p>
+          <span class="message-text">{{message.message}}</span>    <span class="date"> {{message.createdAt | date:'dd-MM-yyyy h:mm a'}}</span></p>
       </div>
     </div>
 

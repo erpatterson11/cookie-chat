@@ -21,7 +21,7 @@ angular.module('chatroom').controller('mainCtrl', function($scope, messageServic
      messageService.postMessage(message).then(function(results) {
       return results;
     })
-    $scope.submitMessage.$setPristine();
+    $scope.message = "";
   }
 
 

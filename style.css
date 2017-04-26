@@ -11,6 +11,15 @@ body {
   font-family: sans-serif;
 }
 
+.header-image {
+  background-image: url('https://i.ytimg.com/vi/eId7-Gk5peY/maxresdefault.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100vw;
+  height: 600px;
+}
+
 .main-container {
   width: 75%;
   margin: 10px auto;
@@ -34,15 +43,14 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 0 5px #aaa;
-  padding: 10px;
   background: rgb(250,250,250);
 }
 
 .messages-title {
-  margin: 0 0 10px 0;
+  margin: 0;
   min-width: 400px;
   height: 50px;
-  border-radius: 5px;
+  border: 1px solid #ccc;
   box-shadow: 0 0 5px #ccc;
   display: flex;
   justify-content: center;
@@ -53,14 +61,24 @@ body {
 }
 
 p{
-  text-align: center;
-  min-width: 400px;
+  margin: 0;
   font-size: 17px;
   display: flex;
   justify-content: space-between;
   border: 1px solid #ccc;
-  border-radius: 5px;
   box-shadow: 0 0 5px #aaa;
   padding: 10px;
   background: #fff;
+}
+
+.message-text {
+  flex: 9;
+}
+
+.date {
+  flex: 4;
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
