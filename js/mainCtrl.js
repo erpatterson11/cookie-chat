@@ -5,12 +5,11 @@ angular.module('chatroom').controller('mainCtrl', function($scope, messageServic
 
   $scope.getMessages = function() {
       messageService.getMessages().then(function(results) {
-        console.log(results.data)
       $scope.messages = results.data;
+         console.log(results)
     })
   }
 
-  $scope.getMessages();
 
 
   //The postMessage function will take whatever the user typed in (hint: look at the html and see what ng-model correlates to on the input box),
@@ -19,17 +18,30 @@ angular.module('chatroom').controller('mainCtrl', function($scope, messageServic
 
   $scope.postMessage = function(message) {
      messageService.postMessage(message).then(function(results) {
+
       return results;
     })
     $scope.message = "";
   }
 
+  $scope.deleteChat = function() {
+    messageService.deleteChat().then(function() {
+      console.log("deleted!")
+   })
+ };
+
+// $scope.replaceAll = function(replaceText) {
+//   messageService.replaceAll(replaceText).then(function(results){
+//   })
+// }("Troll");
+
 
   //uncomment this code when your getMessages function is finished
   //This goes and gets new data every second, which mimicking a chat room experience.
    setInterval(function(){
+    // $scope.deleteChat();
+    // $scope.postMessage("trolled");
     $scope.getMessages();
-
   }, 1500)
 
 })

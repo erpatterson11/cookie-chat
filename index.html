@@ -14,6 +14,11 @@
       <form name="submitMessage" ng-submit="postMessage(message)">
         <input class="form-control text-box" type="text"  ng-model="message" placeholder="Message">
       </form>
+
+      <div class="button-container">
+      <button class="button" ng-click="deleteChat()">Delete All</button>
+      </div>
+      
       <div class="messages-container">
         <h1 class="messages-title">Messages from DevMountaineers</h1>
         <p ng-repeat="message in messages ">

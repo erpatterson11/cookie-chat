@@ -27,5 +27,20 @@ angular.module('chatroom').service('messageService', function($http){
     })
   }
 
+  this.deleteChat = function() {
+    return $http({
+      method: 'DELETE',
+      url: 'https://practiceapi.devmounta.in/api/chats',
+    })
+  }
+
+  // this.replaceAll = function(replaceText) {
+  //   $http({
+  //     method: 'PUT',
+  //     url: 'https://practiceapi.devmounta.in/api/chats',
+  //     data: { 'message' : replaceText }
+  //   })
+  // }
+
 
 });
